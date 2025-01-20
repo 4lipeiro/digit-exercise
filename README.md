@@ -1,70 +1,162 @@
-# Getting Started with Create React App
+# Pexels layout 
+(Photo Gallery Application)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a responsive photo gallery application developed as an exercise to demonstrate front-end development skills using React.js. The application dynamically fetches images from the Pexels API and provides an intuitive interface to explore images based on various search topics.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Screenshots
 
-### `npm start`
+![Main View](screenshot/view.jpg)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
+## Approach to Development
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- At first, I used **Postman** to test the provided API and examine the response. After understanding the API's structure, I began building the base functionality of the application. Once the functionality was in place, I focused on designing the UI.
+- Initially, I created a basic design, which I gradually enhanced to be more comprehensive and visually appealing.
+- This phase took more time as I frequently experimented with different styles and kept revising how I wanted the app to look. Finally, I worked on making the app responsive for various screen sizes.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## What I Would Improve
 
-### `npm run build`
+- Due to time constraints and the project deadline, I rushed the CSS development by styling each component individually. Ideally, I would prefer to create a base CSS for the overall application first, then customize specific styles for individual components as needed.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- This approach would also allow me to use CSS variables for colors, fonts, and sizes, ensuring consistency across the UI and simplifying responsiveness. With variables for font weights, sizes, and colors, managing the design and making changes would be much easier.However, due to the frequent style revisions I made during the project, I had to rush through the CSS, which resulted in some inconsistencies.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- I would also implement an input feature that allows users to specify the number of pictures they want. This would enhance user customization and improve the overall experience.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Additionally, a toast message for empty search inputs would help inform users to provide a valid query, enhancing user feedback and experience.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Deployment
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- The application has been deployed on a server for demonstration purposes and is currently accessible at [alipeiro.xyz](https://alipeiro.xyz). Since this deployment is only for showcase, it is hosted on my Raspberry Pi and will not remain live for an extended period.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
+## Features
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Layout
+- **Left Rail**: A vertical panel containing buttons (e.g., "Image 1", "Image 2", etc.) to select an image.
+- **Main Area**:
+  - Displays the currently selected image.
+  - Shows the photographer's name as a link above the main image.
+  - Thumbnails of all images below the main image for easy navigation.
+- **Responsive Design**: Ensures the layout adapts to various screen sizes, including desktops, tablets, and mobile devices.
 
-## Learn More
+### Functionality
+- Clicking a button in the left rail or a thumbnail updates the main image and highlights the corresponding button and thumbnail.
+- Dynamically fetches images using the Pexels API based on a search topic.
+- Allows users to search for images by entering a topic in the search bar.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Data Retrieval
+- Images are fetched from the [Pexels API](https://www.pexels.com/api/) using the following example request:
+  ```bash
+  curl -H "Authorization: YOUR_API_KEY" \
+  "https://api.pexels.com/v1/search?query=nature&per_page=3"
+  ```
+- The default search topic is **nature**.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **React.js**: For building the user interface.
+- **CSS**: For styling, including responsiveness with `@media` queries.
+- **Pexels API**: For fetching image data dynamically.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Directory Structure
 
-### Making a Progressive Web App
+```
+.gitignore
+package.json
+public/
+    index.html
+    manifest.json
+    robots.txt
+README.md
+src/
+    App.css
+    App.js
+    components/
+        Image/
+            mainImage.css
+            MainImage.js
+        Rail/
+            rail.css
+            Rail.js
+        Search/
+            searchbar.css
+            Searchbar.js
+        Thumbnail/
+            thumbnail.css
+            Thumbnail.js
+    index.css
+    index.js
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## Components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### App.js
+- The root component that manages the state of images and search topics.
 
-### Deployment
+### Rail
+- Displays the left-side rail with buttons to select images.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### MainImage
+- Displays the currently selected image with the photographer's information.
 
-### `npm run build` fails to minify
+### Thumbnail
+- Displays thumbnails of all images for quick navigation.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### SearchBar
+- Allows users to input a topic and search for relevant images.
+
+---
+
+## Responsiveness
+
+- Breakpoints are added for mobile and desktop devices as well as smaller screens.
+- Styles adapt the layout, images, and text to ensure usability on all screen sizes.
+
+---
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/4lipeiro/digit-exercise
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd digit-exercise
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm start
+   ```
+5. Open the application in your browser at `http://localhost:3000`.
+
+---
+
+## Usage
+
+1. Launch the application.
+2. Use the **Search Bar** to search for images by topic.
+3. Click buttons in the left rail or thumbnails to view the corresponding image.
+4. Click the photographer's name to visit their Pexels profile.
+
+---
+
+## Author
+
+Developed by Ali Peiro.
