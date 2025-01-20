@@ -1,0 +1,8 @@
+.search-form {
+  margin: 2rem;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+}

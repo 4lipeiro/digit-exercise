@@ -1,0 +1,18 @@
+.rail-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .rail-button {
+    margin: 0.5rem 0;
+    background-color: #ffffff;
+    border: 1px solid #ededed;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .rail-button.selected {
+    background-color: #ededed;
+    border-color: #1100ff;
+  }
+  
