@@ -33,3 +33,26 @@
   border-color: #1100ff;
   box-shadow: rgba(151, 65, 252, 0.4) 0 0 20px 5px;
 }
+
+
+@media (max-width: 768px) {
+  .rail-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .rail-button {
+    width: 120px;
+    height: 50px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .rail-button {
+    width: 130px;
+    height: 55px;
+  }
+}

@@ -60,4 +60,31 @@
   border: 2px solid #372cd3;
   border-right: 0;
 }
-    
+
+@media (max-width: 768px) {
+
+  .search-form {
+    width: 250px;
+    height: 35px;
+  }
+
+  .search-input {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  .search-button {
+    width: 80px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .search-input {
+    font-size: 1rem;
+  }
+
+  .search-button {
+    font-size: 0.9rem;
+  }
+}

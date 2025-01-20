@@ -76,3 +76,34 @@
   border-style: solid;
   border-color: #333 transparent transparent transparent;
 }
+
+
+@media (max-width: 768px) {
+  .main-image-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-image {
+    margin: 0 auto;
+    max-width: 90%;
+    height: auto;
+  }
+
+  .tooltip button {
+    font-size: 0.8rem;
+    padding: 8px 15px;
+  }
+
+  .tooltip-text {
+    width: 120px;
+    font-size: 0.7rem;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .main-image {
+    max-width: 95%;
+  }
+}
