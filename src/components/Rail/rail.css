@@ -34,6 +34,20 @@
   box-shadow: rgba(151, 65, 252, 0.4) 0 0 20px 5px;
 }
 
+@media (max-width: 320px) {
+  .rail-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.2rem;
+    flex-wrap: wrap;
+  }
+
+  .rail-button {
+    width: 90px;
+    height: 35px;
+    font-size: 0.7rem;
+  }
+}
 
 @media (max-width: 768px) {
   .rail-container {
