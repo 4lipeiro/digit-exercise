@@ -1,18 +1,35 @@
 .rail-container {
     display: flex;
     flex-direction: column;
+    padding: 1rem;
   }
-  
-  .rail-button {
-    margin: 0.5rem 0;
-    background-color: #ffffff;
-    border: 1px solid #ededed;
-    padding: 0.5rem;
-    cursor: pointer;
-  }
-  
-  .rail-button.selected {
-    background-color: #ededed;
-    border-color: #1100ff;
-  }
-  
+
+.rail-button  {
+  margin: 1rem;
+  width: 150px;
+  height: 60px;
+  border: 3px solid #315cfd;
+  border-radius: 45px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: white;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: rgba(151, 65, 252, 0.3) 0 0 20px 05px;
+}
+
+.rail-button:hover {
+  background: #315cfd;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.rail-button.selected {
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #315cfd;
+  color: white;
+  border-color: #1100ff;
+  box-shadow: rgba(151, 65, 252, 0.4) 0 0 20px 5px;
+}

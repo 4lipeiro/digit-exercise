@@ -44,14 +44,15 @@ function App() {
 
   return (
     <div className="App">
-      <SearchBar onSearch={handleSearch} />
+      
 
       <div className="gallery-container">
 
         <div className="left-rail-container">
+          <SearchBar onSearch={handleSearch} />
           <Rail images={images} selectedIndex={selectedIndex} onSelect={handleSelect} />
         </div>
-
+        
         <div className="main-content-container">
           <MainImage image={images[selectedIndex]} />
           <Thumbnail images={images} selectedIndex={selectedIndex} onSelect={handleSelect} />

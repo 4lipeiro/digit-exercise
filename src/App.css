@@ -1,3 +1,8 @@
+body {
+  background: radial-gradient(circle at 67% 44%, rgba(0, 40, 83, 1) 23%, rgba(4, 12, 24, 1) 99%);
+  font-family: "Poppins", sans-serif;
+}
+
 .gallery-container {
   display: flex;
 }
@@ -9,5 +14,14 @@
 
 .main-content-container {
   flex: 3 1 300px;
-  padding: 1rem;
+  padding: 2.5rem;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-container {
+  height: 100vh;
 }

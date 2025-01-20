@@ -23,8 +23,9 @@ function SearchBar({ onSearch }) {
         value={inputValue} 
         onChange={handleChange} 
         placeholder="Enter a topic ..." 
+        className="search-input"
       />
-      <button type="submit">Search</button>
+      <button type="submit" className="search-button">Search</button>
     </form>
   );
 }
